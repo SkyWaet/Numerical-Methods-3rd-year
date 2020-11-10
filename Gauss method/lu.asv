@@ -1,0 +1,24 @@
+function [L,U] = lu(A)
+    echo off
+    A = M
+Sum1=0
+Sum2=0
+myL = eye(sizeOfA)
+myU = eye(sizeOfA)
+
+for i = 1:sizeOfA
+    for j=i:sizeOfA
+        for k = 1:(i-1)
+            Sum1 =Sum1+ myL(j,k)*myU(k,i)
+        end
+        myL(j,i)= A(j,i) - Sum1
+         for k = 1:(i-1)
+            Sum2 = Sum2+myL(i,k)*myU(k,j)
+         end
+         myU(i,j)=(A(i,j)-Sum2)/myL(i,i)
+         Sum1=0
+         Sum2=0
+    end
+end
+end
+

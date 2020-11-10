@@ -1,0 +1,10 @@
+function invA = inverseMatrix(L,U)
+    n = size(L,1);
+    I = eye(n);
+    invA = eye(n);
+    for i = 1:sizeOfA
+        y=Gauss([L,I(:,i)]);
+        invA(:,i)=Gauss([U,y]);
+    end
+end
+
