@@ -1,5 +1,0 @@
-function y = adamsIn(x,y_RK,h)
-      for i=5:size(x)-1
-          e
-end
-
