@@ -1,4 +1,4 @@
-function [eigVal,eigVect,n] = dotProdMethod(A)
+function [eigVal,n] = dotProdMethod(A)
     echo off;
     Yk = zeros(size(A,1),1);    
     Yk(1) = 1;
@@ -22,6 +22,5 @@ function [eigVal,eigVect,n] = dotProdMethod(A)
         
     end     
     eigVal = lambda_k1;
-    eigVect = Yk;
 end
 

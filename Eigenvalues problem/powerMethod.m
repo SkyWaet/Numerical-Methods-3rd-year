@@ -20,6 +20,6 @@ function [eigVal,eigVect,n] = powerMethod(A)
         eval = norm(A*Yk - lambda.*Yk)/norm(Yk);
     end     
     eigVal = lambda;
-    eigVect = Yk;
+    eigVect = Yk./norm(Yk);
 end
 
